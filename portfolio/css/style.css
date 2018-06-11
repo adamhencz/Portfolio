@@ -1,0 +1,183 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* font-faces */
+
+@font-face {font-family: Regular; src: url(typo/UniversNextPro-Regular.ttf);}
+@font-face {font-family: Thin; src: url(typo/UniversNextPro-Thin.ttf);}
+
+/* reset body */
+
+body {
+	padding: 0;
+	margin: 0;
+	font-family: Regular;
+	color: #EFE5D5;
+	font-size: 50pt;
+	line-height: 1em;
+}
+
+/* paragraph styles */
+
+p {
+	margin: 0;
+	word-break: break-all;
+	line-height: 1em;
+}
+
+a {
+	text-decoration: none;
+	color: #EFE5D5;
+}
+
+a.japan {
+	color: #E52914;
+	font-size: 80pt;
+}
+
+p.title {
+	padding: 75pt 0 45pt 25pt;
+	font-size: 60pt;
+	word-break: keep-all;
+}
+
+p.thin {
+	font-family: Thin;
+	font-size: 30pt;
+	padding-left: 25pt;
+	line-height: 1.5em;
+}
+
+p.text {
+	font-family: Thin;
+	font-size: 20pt;
+	padding-left: 25pt;
+	word-break: keep-all;
+	line-height: 1.2em;
+}
+
+p.element {
+	padding: 30pt;
+}
+
+/* grid layout */
+
+.wrapper {
+	height: 100vh;
+	display: grid;
+	grid-gap: 0px;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas:
+		"textbox elements";
+}
+
+.textbox {
+	grid-area: textbox;
+	background-color: #3E4E56;
+	padding: 50pt
+}
+
+.cv-textbox {
+	height: 100vh;
+	background-color: #efefef;
+	color: #3E4E56;
+	padding: 50pt;
+}
+
+span.ita {
+	font-style: italic;
+	font-size: 18pt;
+}
+
+header#video-color {
+	background-color: #9DBDB7;
+}
+
+header#redesign-color {
+	background-color: #FFCFD1;
+	color: #3E4E56;
+}
+
+header#animation-color {
+	background-color: #F9B167;
+}
+
+header#ux-color {
+	background-color: #DFDBB3;
+	color: #3E4E56;
+}
+
+a#dark {color: #3E4E56}
+
+.elements {
+	font-size: 80pt;
+	grid-area: elements;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-template-areas:
+		"video redesign"
+		"animation ux";
+}
+
+#video {
+	grid-area: video;
+	background-color: #9DBDB7;
+}
+
+#redesign {
+	grid-area: redesign;
+	background-color: #FFCFD1;
+}
+
+#animation {
+	grid-area: animation;
+	background-color: #F9B167;
+}
+
+#ux {
+	grid-area: ux;
+	background-color: #DFDBB3;
+}
+
+/* media queries */
+
+@media all and (max-width: 1024px) {
+	.wrapper {
+	height: 100vh;
+	display: grid;
+	grid-gap: 0px;
+	grid-template-columns: 1fr;
+	grid-template-areas:
+		"textbox"
+		"elements";
+	}
+	
+	.elements {
+	font-size: 40pt;
+	grid-area: elements;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-areas:
+		"video"
+		"redesign"
+		"animation"
+		"ux";
+	}
+	
+	.element {
+		line-height: 3em;
+	}
+	
+	a.japan {
+	color: #E52914;
+	font-size: 40pt;
+	}
+
+	p.title {
+	padding: 45pt 0 25pt 5pt;
+	font-size: 40pt;
+	word-break: keep-all;
+	}
+}
+
